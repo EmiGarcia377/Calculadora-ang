@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+main{
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.main-container{
+    width: 70%;
+    max-width: 800px;
+    min-width: 500px;
+    padding: 20px 0;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.calculator-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input{
+    margin-top: 4px;
+    padding: 4px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: all 0.2s ease-in;
+}
+input:hover{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+input:focus{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+select{
+    padding: 2px;
+    margin-top: 8px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: all 0.2s ease-in;
+}
+select:hover{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+select:focus{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+button{
+    padding: 8px 20px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background-color: #3F5EFB;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-size: 20px;
+}
+button:hover{
+    background-color: #FC466B;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}

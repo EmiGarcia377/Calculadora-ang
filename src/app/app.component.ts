@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,5 +9,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Calculadora-ang';
+  
+  constructor(){
+    calculatorForm: new FormGroup({
+      number1: new FormControl('', Validators.required),
+      number2: new FormControl('', Validators.required),
+      operation: new FormControl('', Validators.required)
+    })
+  }
 }
