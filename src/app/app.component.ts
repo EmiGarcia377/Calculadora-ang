@@ -29,6 +29,8 @@ export class AppComponent {
     this.op = this.calculatorForm.value.operation;
 
     this.API_URL = `http://localhost:3000/${this.op}?num1=${this.num1New}&num2=${this.num2New}`;
+
+    this.calculatorForm.reset()
     return this.http.get<Res>(this.API_URL).subscribe({
       next: (data) =>{
         this.res = data;
