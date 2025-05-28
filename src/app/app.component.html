@@ -2,31 +2,35 @@
   <h1>Calculadora en angular</h1>
   <div class="main-container">
     <div class="calculator-container">
-      <form >
+      <form [formGroup]="calculatorForm">
         <fieldset>
           <label for="num1">Numero 1:</label>
-          <input type="number" name="num1" >
+          <input type="number" id="num1" formControlName="number1">
         </fieldset>
         <fieldset>
           <label for="num2">Numero 2:</label>
-          <input type="number" name="num2">
+          <input type="number" id="num2" formControlName="number2">
         </fieldset>
-        <select name="operation" id="">
-          <option value="sumar">Sumar</option>
-          <option value="restar">Restar</option>
-          <option value="multiplicar">Multiplicar</option>
-          <option value="dividir">Dividir</option>
+        <select name="operation" formControlName="operation">
+          <option value="sum">Sumar</option>
+          <option value="rest">Restar</option>
+          <option value="mult">Multiplicar</option>
+          <option value="div">Dividir</option>
         </select>
       </form>
       <div class="result-container">
         <h2>Resultado:</h2>
         <div class="result">
-          <p></p>
+          @if (num2New === 0) {
+            <p>{{res.error}}</p>
+          } @else {
+            <p>{{ res.result }}</p>
+          }
         </div>
       </div>
     </div>
     <div class="button-container">
-      <button>Calcular</button>
+      <button (click)="calculateNum()" [disabled]="calculatorForm.invalid">Calcular</button>
     </div>
   </div>
 </main>
