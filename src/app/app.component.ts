@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import Res from '../models/Res';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
